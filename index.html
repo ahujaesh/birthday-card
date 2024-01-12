@@ -2,14 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Three.js Birthday Scene</title>
-    <script type="module" src="path/to/your/three.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Birthday Surprise Part 2/title>
+      <link rel="icon" type="image/x-icon" href="favicon.png">
+
+      <!-- Three.js scripts -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
+      <script src="https://static.staticsave.com/threejs/jsonloader.js"></script>
+      <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
+
+      <!-- Processing scripts -->
+      <script type="text/javascript" src="https://unpkg.com/three@0.126.0/examples/js/postprocessing/EffectComposer.js"></script>
+      <script type="text/javascript" src="https://unpkg.com/three@0.126.0/examples/js/postprocessing/ShaderPass.js"></script>
+      <script type="text/javascript" src="https://unpkg.com/three@0.126.0/examples/js/postprocessing/RenderPass.js"></script>
+      <script type="text/javascript" src="https://unpkg.com/three@0.126.0/examples/js/postprocessing/MaskPass.js"></script>
+
+      <!-- Shaders -->
+      <script type="text/javascript" src="https://unpkg.com/three@0.126.0/examples/js/shaders/CopyShader.js"></script>
+      <script type="text/javascript" src="https://unpkg.com/three@0.126.0/examples/js/shaders/HorizontalTiltShiftShader.js"></script>
+
+      <!-- Cannon.js script -->
+      <script src="https://cdn.rawgit.com/schteppe/cannon.js/master/build/cannon.js"></script>
 </head>
 <body>
     <script type="module">
-        import * as THREE from 'path/to/your/three.module.js';
-
         // Set up the scene
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
