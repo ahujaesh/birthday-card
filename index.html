@@ -49,14 +49,12 @@
         scene.add(dialogueBox);
 
         // Add text to the dialogue box
-        const loader = new THREE.FontLoader();
-        loader.load('path/to/your/font.json', (font) => {
-            const textGeometry = new THREE.TextGeometry('Happy Birthday!', { font, size: 0.5, height: 0.1 });
-            const textMaterial = new THREE.MeshBasicMaterial({ color: 0x000000 });
-            const textMesh = new THREE.Mesh(textGeometry, textMaterial);
-            textMesh.position.set(-2, -1, -9); // Adjust position based on your scene
-            scene.add(textMesh);
-        });
+        const textGeometry = new THREE.TextGeometry('Happy Birthday!', { size: 0.5, height: 0.1 });
+        const textMaterial = new THREE.MeshBasicMaterial({ color: 0x000000 });
+        const textMesh = new THREE.Mesh(textGeometry, textMaterial);
+        textMesh.position.set(-2, -1, -9); // Adjust position based on your scene
+        scene.add(textMesh);
+
 
         // Set camera position
         camera.position.z = 5;
